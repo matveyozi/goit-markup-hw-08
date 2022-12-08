@@ -1,0 +1,196 @@
+.footer {
+    background: #2F303A;
+    padding: 60px 0;
+
+    &__wrapper {
+        display: flex;
+        gap: 60px;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+
+        @include mq(mob) {}
+
+        @include mq(tab) {
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+
+        @media screen and (min-width:1200px) {
+            gap: 70px;
+            align-items: baseline;
+            flex-direction: unset;
+            justify-content: unset;
+        }
+    }
+
+    & .logo {
+        display: block;
+        color: #fff;
+        margin-bottom: 20px;
+    }
+
+    & a {
+        text-decoration: none;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+
+        // align-items: center;
+        text-align: center;
+
+        &:last-child {
+            width: 100%;
+
+            @include mq(tab) {
+                width: 450px;
+                margin: 0 auto;
+            }
+            @include mq(desk) {
+                width: auto;
+                margin: 0;
+            }
+        }
+        @include mq(desk) {
+            text-align: unset;
+        }
+        & .social__link {
+            color: #fff;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+
+            &:hover,
+            &:focus {
+                background-color: var(--blue-color);
+            }
+        }
+    }
+
+
+
+
+    &__form {
+
+        display: flex;
+        gap: 40px;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @include mq(tab) {
+            // height: 50px;
+            width: 450px;
+            gap: 20px;
+        }
+
+        @include mq(desk) {
+            flex-direction: row;
+            height: 50px;
+            width: auto;
+        }
+
+        & input {
+            height: 100%;
+            width: 100%;
+            padding: 15px 16px;
+            background-color: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+            border-radius: 4px;
+            font-size: 16px;
+            line-height: 1.25;
+            letter-spacing: 0.03em;
+            color: rgba(255, 255, 255, 0.6);
+            transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+            color: #fff;
+
+            @media screen and (min-width:480px) {
+                width: 450px;
+            }
+
+            @media screen and (min-width:1200px) {
+                width: 358px;
+            }
+
+            &:focus {
+                outline: none;
+                border-color: var(--blue-color);
+            }
+        }
+
+    }
+
+    &__btn {
+        display: block;
+        padding: 10px 62px 10px 28px;
+        background-color: var(--blue-color);
+        font-size: 16px;
+        line-height: 1.88;
+        letter-spacing: 0.06em;
+        color: #FFFFFF;
+        vertical-align: middle;
+        position: relative;
+
+    }
+
+    &__icon-btn {
+        width: 24px;
+        height: 24px;
+        display: block;
+        position: absolute;
+        right: 28px;
+        top: 13px;
+    }
+}
+
+
+.address {
+    display: flex;
+    flex-direction: column;
+    max-width: 231px;
+
+    &__item:not(:last-child) {
+        margin-bottom: 9px;
+    }
+
+    &__link {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.71;
+        letter-spacing: 0.03em;
+        color: rgba(255, 255, 255, 0.6);
+
+
+    }
+
+    &__item {
+        &:first-child {
+            & .address__link {
+                color: #FFF;
+            }
+        }
+
+        & .address__link:hover,
+        & .address__link:focus {
+            color: var(--blue-color);
+        }
+    }
+
+
+}
+
+
+
+.social__title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
