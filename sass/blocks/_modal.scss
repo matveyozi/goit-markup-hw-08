@@ -20,11 +20,11 @@
         }
 
         @include mq(tab) {
-            margin: 208px auto;
+            // margin: 208px auto;
         }
 
         @include mq(desk) {
-            margin: 221px auto;
+            // margin: 221px auto;
             max-width: 528px;
         }
     }
